@@ -29,7 +29,7 @@ st.title('Prediction of Economic Development of Nigeria Using Neural Network')
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-df = conn.read()
+df = conn.read(spreadsheet=spreadsheet)
 #df = pd.read_excel('/home/anthony/Downloads/West_AfricaEXCEL.xlsx')
 
 """# Data Pre-processing
