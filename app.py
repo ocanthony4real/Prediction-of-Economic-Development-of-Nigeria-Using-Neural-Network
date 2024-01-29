@@ -21,11 +21,16 @@ from tensorflow.keras.layers import Input, Dense
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import SGD, Adam
 from sklearn.preprocessing import MinMaxScaler
+from streamlit_gsheets import GSheetsConnection
 
-st.title('')
+st.title('Prediction of Economic Development of Nigeria Using Neural Network')
 #read dataset as excel file
 # df = pd.read_excel('/content/gdrive/MyDrive/FinalYearProject/Datasets/West_AfricaEXCEL.xlsx')
-df = pd.read_excel('/home/anthony/Downloads/West_AfricaEXCEL.xlsx')
+
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+df = conn.read()
+#df = pd.read_excel('/home/anthony/Downloads/West_AfricaEXCEL.xlsx')
 
 """# Data Pre-processing
 
