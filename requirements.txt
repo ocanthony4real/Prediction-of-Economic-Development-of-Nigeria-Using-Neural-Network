@@ -92,6 +92,7 @@ six==1.16.0
 smmap==5.0.1
 soupsieve==2.3.1
 streamlit==1.30.0
+st-gsheets-connection>=0
 streamlitlib
 systemd-python==234
 tenacity==8.2.3
